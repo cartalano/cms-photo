@@ -1,0 +1,63 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fotoforts",
+  "info": {
+    "singularName": "fotofort",
+    "pluralName": "fotoforts",
+    "displayName": "fotofort"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "period": {
+      "type": "component",
+      "component": "shared.periode",
+      "repeatable": false
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "speakers": {
+      "type": "component",
+      "component": "shared.artiste",
+      "repeatable": false
+    },
+    "lieu": {
+      "type": "component",
+      "component": "shared.lieu",
+      "repeatable": true
+    },
+    "files": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "videoUrl": {
+      "type": "string"
+    }
+  }
+}

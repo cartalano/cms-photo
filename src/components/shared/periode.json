@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_periodes",
+  "info": {
+    "displayName": "periode"
+  },
+  "options": {},
+  "attributes": {
+    "startDate": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date"
+    }
+  },
+  "config": {}
+}
