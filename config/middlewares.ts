@@ -4,14 +4,16 @@ export default [
   {
     name: 'strapi::cors',
     config: {
+      enabled: true,
       origin: [
-        'http://localhost:1337',         // optional
-        'http://localhost:3000',          // local dev front
-        'https://cartalano.github.io'     // ✅ GitHub Pages host
+        'http://localhost:3000',
+        'http://localhost:3001',
+        'https://cartalano.github.io',
+        'https://cartalano.github.io/LaNombreuse'
       ],
       headers: '*',
       methods: ['GET','POST','PUT','PATCH','DELETE','HEAD','OPTIONS'],
-      credentials: true,
+      keepHeadersOnError: true,
     },
   },
   'strapi::security',
