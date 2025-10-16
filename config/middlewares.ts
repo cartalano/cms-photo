@@ -1,22 +1,22 @@
 export default [
   'strapi::logger',
   'strapi::errors',
+  'strapi::security',                
+
   {
     name: 'strapi::cors',
     config: {
-      enabled: true,
       origin: [
         'http://localhost:3000',
         'http://localhost:3001',
-        'https://cartalano.github.io',
-        'https://cartalano.github.io/LaNombreuse'
+        'https://cartalano.github.io', 
       ],
-      headers: '*',
-      methods: ['GET','POST','PUT','PATCH','DELETE','HEAD','OPTIONS'],
+      methods: ['GET','HEAD','OPTIONS','POST','PUT','PATCH','DELETE'],
+      headers: ['Content-Type','Authorization','Origin','Accept','Range'],
       keepHeadersOnError: true,
     },
   },
-  'strapi::security',
+
   'strapi::poweredBy',
   'strapi::query',
   'strapi::body',
