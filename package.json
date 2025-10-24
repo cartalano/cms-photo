@@ -1,43 +1,17 @@
 {
-  "name": "cms-photo",
-  "version": "0.1.0",
+  "name": "lanombreuse-strapi",
   "private": true,
-  "description": "A Strapi application",
+  "engines": {
+    "node": ">=18 <21"
+  },
   "scripts": {
-    "build": "strapi build",
-    "console": "strapi console",
-    "deploy": "strapi deploy",
-    "dev": "strapi develop",
     "develop": "strapi develop",
+    "build": "strapi build",
     "start": "strapi start",
-    "strapi": "strapi",
-    "upgrade": "npx @strapi/upgrade latest",
-    "upgrade:dry": "npx @strapi/upgrade latest --dry"
+    "postinstall": "node -v && npm -v"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.22.0",
-    "@strapi/plugin-users-permissions": "5.22.0",
-    "@strapi/strapi": "5.22.0",
-    "better-sqlite3": "11.3.0",
-    "mysql2": "^3.15.3",
-    "pg": "^8.16.3",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-router-dom": "^6.0.0",
-    "styled-components": "^6.0.0"
-  },
-  "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "typescript": "^5"
-  },
-  "engines": {
-    "node": ">=18.0.0 <=22.x.x",
-    "npm": ">=6.0.0"
-  },
-  "strapi": {
-    "uuid": "93bbfc62-1495-48e5-ae06-f5c8f6bfab04",
-    "installId": "8dae7b0536d7ae07f6426af3a222f26eb408a87c4063c179f2790b60f9200939"
+    "@strapi/strapi": "^4.25.0",
+    "mysql2": "^3.10.0"        
   }
 }
